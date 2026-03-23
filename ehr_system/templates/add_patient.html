@@ -1,0 +1,38 @@
+<h2>Add Patient</h2>
+
+<style>
+    form{
+        width: 300px;
+        margin: auto;
+    }
+    button{
+        margin-top: 10px;
+        background-color:blue;
+        color:white;
+        border:none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label>Name:</label>
+        {{form.name}}
+    </div>
+    <div>
+        <label>Age:</label>
+        {{form.age}}
+    </div>
+    <div>
+        <label>Gender:</label>
+        {{form.gender}}
+    </div>
+    <div>
+        <label>Contact:</label>
+        {{form.contact}}
+    </div>   
+ 
+    <button type="submit">Save</button>
+    
+</form>
